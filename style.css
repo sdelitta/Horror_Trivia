@@ -1,0 +1,72 @@
+
+body {
+    text-align: center;
+    background-color: grey;
+}
+
+ header {
+    background-color: black;
+    font-size: 30px;
+    color: rgb(153, 255, 0);
+    text-transform: uppercase;
+    text-shadow: -1px 3px 3px indigo;
+    margin-top: 0px;
+    border-color: red;
+    padding: 1px;
+    font-family: ;
+    }
+
+#score {
+    position: center;
+    padding: 0px;
+    margin: 20px;
+}
+
+#quiz-area {
+    position:;
+    background-image: url(https://store-images.s-microsoft.com/image/apps.49109.13704834064962972.1308a6d3-919b-4a2c-8736-772e92189eed.166d4919-c3d7-42c8-bf6c-46e58a43e978?mode=scale&q=90&h=1080&w=1920);
+    background-position: 50px, 150px;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 90%;
+    padding: 200px;
+}
+
+#dungeon-image {
+    width: auto;
+    height: auto;
+    position: center, relative;
+    border: red
+}
+
+#questions {
+    position: relative;
+    background: rgba(39, 38, 38, 0.8);
+    top: 150px;
+    color: indigo;
+    text-shadow: -1px 1px 2.5px yellowgreen;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: transparent;
+    color: indigo;
+    border: greenyellow 2px solid;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: -2px 1px 3px purple;
+    text-shadow: -1px 1px 1px greenyellow;
+}
+
+
+
+.hidden {
+    display: none;
+   }
+   
+   .visible {
+       display: block;
+   }
