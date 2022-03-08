@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/><script defer src="app.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <title>Horror Cinema Trivia</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script defer src="app.js"></script>
 </head>
 <body>
     <header><h1>Horror Cinema Trivia</h1></header>
-    
-    <div id="score">THIS MEANS SCORE</div>
 
-    <div id="quiz-area" class="visible">
+    <div id="score-section" class="visible">
+        <div id="score-label">YOUR SCORE</div>
+        <div class="score-marks">
+            <h2 id="score-correct"></h2>
+            <h2 id="score-wrong"></h2>
+        </div>
+    </div>
+
+    <div id="quiz-area">
+        <p id="keeper-label" class="hidden">Answer Me These Questions Three!</p>
         <div id="keeper">
             <img src="">
         </div>
         <div id="dungeon-image">    
             <img src=""> 
         </div>
-        <p id="questions">This is where the questions live</p>
+        <p id="questions"></p>
         </div>
     </div>
 
-    <div id="answer-buttons" class="visible">
-        <button id="ans1">answer 1</button>
-        <button id="ans2">answer 2</button>
-        <button id="ans3">answer 3</button>
+    <div id="answer-buttons">
+        <button id="ans1">Gunnar Hansen</button>
+        <button id="ans2">Robert Englund</button>
+        <button id="ans3">Jason Voorhees</button>
     </div>
+
+
 </body>
 </html>
