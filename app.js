@@ -14,104 +14,72 @@ let ansOne = document.querySelector("#ans1")
 let ansTwo = document.querySelector("#ans2")
 let ansThree = document.querySelector("#ans3")
 
+
 let answers = [
-    [answer1, answer2, answer3],
-    [answer4, answer5, answer6],
-    [answer7, answer8, answer9]
+    ["Gunnar Hansen", "Robert Englund", "Jason VoorHees"],
+    ["Leatherface", "Jigsaw", "Pinhead"],
+    ["John Carpenter", "George Romero", "Wes Craven"]
 ]
 
 
 question.innerText = questions[0]
-const questFunction = () => {
-    for (let i=0; i<questions.length; i++){
-        // if(questions[0]) {
-        //     question.innerText = questions[0]
-        //     ansOne.innerText = "Gunnar Hansen"
-        //     ansTwo.innerText = "Robert Englund"
-        //     ansThree.innerText = "Jason Voorhees"
 
-        // }
-        // if(markCorrect.innerText === "*") {
-        //     question.innerText = questions[1]
-        // }
-        question = questions[i]
-        for (let n = 0; n<answers.length; n++){
-            ansOne = answers[i][n]
-        }
+const questFunction = () => {
+    
+        if(questions[0] === question.innerText) {
+            ansOne.innerText = "Gunnar Hansen"
+            ansTwo.innerText = "Robert Englund"
+            ansThree.innerText = "Jason Voorhees"
+        } if(questions[1] === question.innerText){
+            ansOne.innerText = answers[1][0]
+            ansTwo.innerText = answers[1][1]
+            ansThree.innerText = answers[1][2]
+        } if(questions[2] === question.innerText){
+            ansOne.innerText = answers[2][0]
+            ansTwo.innerText = answers[2][1]
+            ansThree.innerText = answers[2][2]     
     }
 }
-
-////////////////////////////////////////////////////////
-// question.innerText = questions[0]
-// ansOne.innerText = "Gunnar Hansen"
-// ansTwo.innerText = "Robert Englund"
-// ansThree.innerText = "Jason Voorhees"
-    
-// const questFunction = () => {
-//         if (markCorrect.innerText === "*") {
-//             question.innerText = questions[1]
-//             ansOne.innerText = "Leatherface"
-//             ansTwo.innerText = "Jigsaw"
-//             ansThree.innerText = "Pinhead"
-//             // questFunction()
-//     } else 
-//         if (markWrong.innerText === "/"){
-//             ansOne.innerText = "Leatherface"
-//             ansTwo.innerText = "Jigsaw"
-//             ansThree.innerText = "Pinhead"
-//             question.innerText = questions[1]
-//             // questFunction()
-//     }
-//         if (markCorrect.innerText === "**") {
-//             question.innerText = questions[2]
-//             ansOne.innerText = "John Carpenter"
-//             ansTwo.innerText = "George Romero"
-//             ansThree.innerText = "Wes Craven"
-//             // questFunction()
-//     }
-//         if (markWrong.innerText === "//"){
-//             ansOne.innerText = "John Carpenter"
-//             ansTwo.innerText = "George Romero"
-//             ansThree.innerText = "Wes Craven"
-//             question.innerText = questions[2]
-//             // questFunction()
-//     }
-// }
-
 
 questFunction()
 
 
 
 ansOne.addEventListener("click", () => {
-    if(question === questions[0]){
-        markWrong.innerText = "/"
-    } else if (question === questions[1]) {
-        markCorrect.innerText = "* *"
-    } else if (question === questions[2]){
-        markWrong.innerText = "/ / /"
+    if(question.innerText === questions[0]){
+        markWrong.innerText += "/"
+        question.innerText = questions[1]
+    } else if (question.innerText === questions[1]) {
+        markCorrect.innerText += "*"
+        question.innerText = questions[2]
+    } else if (question.innerText === questions[2]){
+        markWrong.innerText += "/"    
     }
     questFunction()
 })
 
 ansTwo.addEventListener("click", () => {
-    if(question = questions[0]){
-        markCorrect.innerText = "*"
-    } else if (question = questions[1]) {
-        markWrong.innerText = "/ /"
-    } else if (question = questions[2]){
-        markCorrect.innerText = "* * *"
+    if(question.innerText === questions[0]){
+        markCorrect.innerText += "*"
+        question.innerText = questions[1]
+    } else if (question.innerText === questions[1]) {
+        markWrong.innerText += "/"
+        question.innerText = questions[2]
+    } else if (question.innerText === questions[2]){
+        markCorrect.innerText += "*"
     }
     questFunction()
 })
 
 ansThree.addEventListener("click", () => {
-    if(question = questions[0]){
-        markWrong.innerText = "/"
-    } else if (question = questions[1]) {
-        markWrong.innerText = "/ /"
-    } else if (question = questions[2]){
-        markWrong.innerText = "/ / /"
+    if(question.innerText === questions[0]){
+        markWrong.innerText += "/"
+        question.innerText = questions[1]
+    } else if (question.innerText === questions[1]) {
+        markWrong.innerText += "/"
+        question.innerText = questions[2]
+    } else if (question.innerText === questions[2]){
+        markWrong.innerText += "/"
     }
     questFunction()
 })
