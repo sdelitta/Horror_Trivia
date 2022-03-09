@@ -5,11 +5,16 @@ let questions =
         "Who directed Night Of The Living Dead?"
     ]
 
+const start = document.querySelector("#start")
+
 const markWrong = document.getElementById("score-wrong")
 const markCorrect = document.getElementById("score-correct")
 
-let question = document.querySelector("#questions")
+const keeperLabel = document.getElementById("keeper-label")
+const gif = document.getElementById("keeper")
 
+let question = document.querySelector("#questions")
+let ansButtons = document.querySelector("#answer-buttons")
 let ansOne = document.querySelector("#ans1")
 let ansTwo = document.querySelector("#ans2")
 let ansThree = document.querySelector("#ans3")
@@ -22,14 +27,16 @@ let answers = [
 ]
 
 
+
+
 question.innerText = questions[0]
 
 const questFunction = () => {
     
         if(questions[0] === question.innerText) {
-            ansOne.innerText = "Gunnar Hansen"
-            ansTwo.innerText = "Robert Englund"
-            ansThree.innerText = "Jason Voorhees"
+            ansOne.innerText = answers[0][0]
+            ansTwo.innerText = answers[0][1]
+            ansThree.innerText = answers[0][2]
         } if(questions[1] === question.innerText){
             ansOne.innerText = answers[1][0]
             ansTwo.innerText = answers[1][1]
@@ -47,68 +54,65 @@ questFunction()
 
 ansOne.addEventListener("click", () => {
     if(question.innerText === questions[0]){
-        markWrong.innerText += "/"
+        markWrong.innerText += " / "
         question.innerText = questions[1]
     } else if (question.innerText === questions[1]) {
-        markCorrect.innerText += "*"
+        markCorrect.innerText += " * "
         question.innerText = questions[2]
     } else if (question.innerText === questions[2]){
-        markWrong.innerText += "/"    
+        markWrong.innerText += " / "    
     }
     questFunction()
 })
 
 ansTwo.addEventListener("click", () => {
     if(question.innerText === questions[0]){
-        markCorrect.innerText += "*"
+        markCorrect.innerText += " * "
         question.innerText = questions[1]
     } else if (question.innerText === questions[1]) {
-        markWrong.innerText += "/"
+        markWrong.innerText += " / "
         question.innerText = questions[2]
     } else if (question.innerText === questions[2]){
-        markCorrect.innerText += "*"
+        markCorrect.innerText += " * "
     }
     questFunction()
 })
 
 ansThree.addEventListener("click", () => {
     if(question.innerText === questions[0]){
-        markWrong.innerText += "/"
+        markWrong.innerText += " / "
         question.innerText = questions[1]
     } else if (question.innerText === questions[1]) {
-        markWrong.innerText += "/"
+        markWrong.innerText += " / "
         question.innerText = questions[2]
     } else if (question.innerText === questions[2]){
-        markWrong.innerText += "/"
+        markWrong.innerText += " / "
     }
     questFunction()
 })
 
+start.addEventListener("click", () => {
+    start.className = ("hidden")
+    keeperLabel.className = ("visible")
+    gif.className = ("visible")
+    question.className = ("visible")
+    ansButtons.className = ("visible")
+    questFunction()
+})
+
+/* 
+
+const restart = confirm
+    ("You win! Would you like to play another round?")
+        if (restart === true) {
+            glutton()
+    } 
 
 
+const gameOver = confirm
+    ("You have been slayed! Play again?")
+        if (restart === true) {
+            glutton()
+    } 
 
-
-
-
-// const question1 = () => {
-//     question.innerText = questions[0]
-//     ansOne.innerText = "Gunnar Hansen"
-//     ansTwo.innerText = "Robert Englund"
-//     ansThree.innerText = "Jason Voorhees"
-// }
-
-// question1()
-
-
-
-// ansOne.addEventListener("click", () => {
-//     if(question = question[0]){
-        
-//     }
-// })
-// ansTwo.addEventListener("click", () => {
-
-// })
-// ansThree.addEventListener("click", () => {
-
-// })
+*/

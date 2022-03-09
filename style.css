@@ -20,7 +20,7 @@ body {
     font-style: italic;
     font-stretch: expanded;
     font-size: 16px;
-    padding: 0px;
+    padding: 20px;
     margin: 0px;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 .score-marks {
-
+    
 }
 
 #score-correct {
@@ -41,19 +41,19 @@ body {
 }
 
 #quiz-area {
+    
     margin-bottom: 20px;
     background-image: url(https://store-images.s-microsoft.com/image/apps.49109.13704834064962972.1308a6d3-919b-4a2c-8736-772e92189eed.166d4919-c3d7-42c8-bf6c-46e58a43e978?mode=scale&q=90&h=1080&w=1920);
-    background-position: 50px, 150px;
+    background-position: 0px, 150px;
     background-repeat: no-repeat;
-    background-size: 90%;
-    padding: 200px;
+    background-size: 100%;
+    padding: 150px;
 }
 
 #keeper-label {
-    position: absolute;
+    position: relative;
     background: rgba(39, 38, 38, 0.8);
-    top: 230px;
-    left: 250px;
+    top: -100px;
     color: orange;
     text-shadow: -1px 1px 2.5px indigo;
     font-size: 30px;
@@ -76,7 +76,7 @@ body {
 #questions {
     position: relative;
     background: rgba(39, 38, 38, 0.8);
-    top: 170px;
+    top: 130px;
     color: yellowgreen;
     text-shadow: -1px 1px 2.5px indigo;
     font-size: 25px;
@@ -94,14 +94,23 @@ button {
     cursor: pointer;
     box-shadow: -2px 1px 3px purple;
     text-shadow: -1px 1px 1px greenyellow;
+    
 }
+
+#start {
+    left: 220px;
+    background-color: black;
+    color: orange;
+    text-shadow: -1px 1.5px 1px purple;
+    position:relative;
+    margin: 100px;
+}
+
+
 button:active {
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
-
-
-
 
 .hidden {
     display: none;
