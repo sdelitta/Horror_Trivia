@@ -23,6 +23,7 @@ const evilLaugh = new Audio("http://www.littlekitchen.com/sounds/iwon.wav");
 const chainsaw = new Audio("http://soundfxcenter.com/video-games/doom/8d82b5_Doom_Chainsaw_Sound_Effect.mp3")
 const startSound = new Audio("http://soundbible.com/grab.php?id=1814&type=wav")
 const freddy = new Audio("https://drive.google.com/uc?export=download&id=13OZkWG1LfbZ47SlqKYRl5TST6EKFtjy3")
+const zombie = new Audio("https://www.videvo.net/sound-effect/zombie-low-distressed-moan/452210/")
 
 let answers = [
     ["Gunnar Hansen", "Robert Englund", "Jason VoorHees"],
@@ -90,7 +91,10 @@ ansTwo.addEventListener("click", () => {
             question.innerText = questions[0]
     } 
     } else if (question.innerText === questions[2]){
-                
+               zombie.play()
+        
+        
+            //YOU WIN function
 
 
     }
@@ -132,22 +136,5 @@ start.addEventListener("click", () => {
     ansButtons.className = ("visible")
     questFunction()
 })
-
-/* 
-
-const restart = confirm
-    ("You win! Would you like to play another round?")
-        if (restart === true) {
-            glutton()
-    } 
-
-
-const gameOver = confirm
-    ("You have been slayed! Play again?")
-        if (restart === true) {
-            glutton()
-    } 
-
-*/
 
 
