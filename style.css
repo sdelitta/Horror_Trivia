@@ -11,16 +11,16 @@ body {
     text-transform: uppercase;
     text-shadow: -1px 3px 3px indigo;
     margin-top: 0px;
+    margin-bottom: 30px;
     padding: 1px;
     /* font-family: ; */
     }
-
+/* 
 #score-section {
     font-family: 'Permanent Marker', cursive;
     font-style: italic;
-    font-stretch: expanded;
-    font-size: 16px;
-    padding: 20px;
+    font-size: 30px;
+    padding: 0px;
     margin: 0px;
 }
 
@@ -38,7 +38,7 @@ body {
 
 #score-wrong {
     color: darkred;
-}
+} */
 
 #quiz-area {
     

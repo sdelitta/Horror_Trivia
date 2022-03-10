@@ -19,6 +19,10 @@ let ansOne = document.querySelector("#ans1")
 let ansTwo = document.querySelector("#ans2")
 let ansThree = document.querySelector("#ans3")
 
+const evilLaugh = new Audio("http://www.littlekitchen.com/sounds/iwon.wav");
+const chainsaw = new Audio("http://soundfxcenter.com/video-games/doom/8d82b5_Doom_Chainsaw_Sound_Effect.mp3")
+const startSound = new Audio("http://soundbible.com/grab.php?id=1814&type=wav")
+const freddy = new Audio("https://drive.google.com/uc?export=download&id=13OZkWG1LfbZ47SlqKYRl5TST6EKFtjy3")
 
 let answers = [
     ["Gunnar Hansen", "Robert Englund", "Jason VoorHees"],
@@ -29,7 +33,7 @@ let answers = [
 
 
 
-question.innerText = questions[0]
+let gameStart = question.innerText = questions[0]
 
 const questFunction = () => {
     
@@ -54,44 +58,73 @@ questFunction()
 
 ansOne.addEventListener("click", () => {
     if(question.innerText === questions[0]){
-        markWrong.innerText += " / "
-        question.innerText = questions[1]
+        evilLaugh.play()
+        const restart = confirm
+    ("Surely you're kidding! Play again?")
+        if (restart === true) {
+            question.innerText = questions[0]
+        } 
     } else if (question.innerText === questions[1]) {
-        markCorrect.innerText += " * "
+        chainsaw.play()
         question.innerText = questions[2]
     } else if (question.innerText === questions[2]){
-        markWrong.innerText += " / "    
+        evilLaugh.play()
+        const restart = confirm
+    ("Finally a wrong answer! I'll enjoy feasting on your innards. Play again?")
+        if (restart === true) {
+            question.innerText = questions[0]
+        }   
     }
     questFunction()
 })
 
 ansTwo.addEventListener("click", () => {
     if(question.innerText === questions[0]){
-        markCorrect.innerText += " * "
+        freddy.play()
         question.innerText = questions[1]
     } else if (question.innerText === questions[1]) {
-        markWrong.innerText += " / "
-        question.innerText = questions[2]
+        chainsaw.play()
+        const restart = confirm
+    ("You are incorrect and therefor banished to spend the rest of eternity in complete darkness while enduring unimaginable pain and suffering! You disgust me. Play again?")
+        if (restart === true) {
+            question.innerText = questions[0]
+    } 
     } else if (question.innerText === questions[2]){
-        markCorrect.innerText += " * "
+                
+
+
     }
     questFunction()
 })
 
 ansThree.addEventListener("click", () => {
     if(question.innerText === questions[0]){
-        markWrong.innerText += " / "
-        question.innerText = questions[1]
+        evilLaugh.play()
+        const restart = confirm
+    ("Have you had your coffee? Surely you'll want to try again")
+        if (restart === true) {
+            question.innerText = questions[0]
+    } 
     } else if (question.innerText === questions[1]) {
-        markWrong.innerText += " / "
-        question.innerText = questions[2]
+        chainsaw.play()
+        const restart = confirm
+        ("Finally a wrong answer! I'll enjoy feasting on your innards. Play again?")
+            if (restart === true) {
+            question.innerText = questions[0]
+        } 
     } else if (question.innerText === questions[2]){
-        markWrong.innerText += " / "
+        evilLaugh.play()
+        const restart = confirm
+    ("Finally a wrong answer! I'll enjoy feasting on your innards. Play again?")
+        if (restart === true) {
+            question.innerText = questions[0]
+        } 
     }
     questFunction()
 })
 
 start.addEventListener("click", () => {
+    startSound.play()
     start.className = ("hidden")
     keeperLabel.className = ("visible")
     gif.className = ("visible")
@@ -116,3 +149,5 @@ const gameOver = confirm
     } 
 
 */
+
+
