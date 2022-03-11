@@ -28,9 +28,6 @@ const freddy = new Audio("https://drive.google.com/uc?export=download&id=13OZkWG
 const zombie = new Audio("https://www.videvo.net/sound-effect/zombie-low-distressed-moan/452210/")
 const youWin = new Audio("http://driber.net/homepage/tr/sounds/s41.wav")
 
-
-
-
 let answers = [
     ["Gunnar Hansen", "Robert Englund", "Jason VoorHees"],
     ["Leatherface", "Jigsaw", "Pinhead"],
@@ -38,8 +35,7 @@ let answers = [
 ]
 
 
-
-let gameStart = question.innerText = questions[0]
+question.innerText = questions[0]
 
 function questFunction() {
 
