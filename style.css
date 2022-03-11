@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     text-align: center;
     background-color: grey;
-    
 }
 
  header {
@@ -87,7 +86,6 @@ body {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-
 #questions {
     position: relative;
     background: rgba(39, 38, 38, 0.8);
@@ -123,7 +121,6 @@ button:active {
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-
 #win-screen {
     block-size: 1000px;
     background-image: url("https://www.teahub.io/photos/full/82-824687_landscape-gif.gif");
@@ -131,15 +128,122 @@ button:active {
     background-repeat: no-repeat;
 }
 
-/* #win-button {
-   margin: 1px; 
-
-} */
-
-
 .hidden {
     display: none;
-   }
+}
    
-   .visible {
-   }
+.visible {
+
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        font-size: 20px;
+        margin-bottom: 1px;
+    }
+    
+    #start {
+        justify-content: center;
+        background-color: black;
+        color: orange;
+        text-shadow: -1px 1.5px 1px purple;
+        margin: 10px;
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    #keeper-label {
+        top: -40px;
+        font-size: 20px;
+        padding: 10px;
+        margin: -70px;
+    }
+
+    #keeper {
+        margin-top:50px;
+        background-size: 100px;
+        margin-bottom: -260px;
+        padding: 50px;
+        /* margin-top: 190px; */
+    }
+    
+    #quiz-area {
+        top: 1px;
+        margin: 10px;
+        padding: 130px;
+    }
+
+    #questions {
+        top: 270px;
+        font-size: 15px;
+        padding: 10px;
+        margin: -30px;
+    }
+
+    #answer-buttons {
+        font-size: 15px;
+        margin: 5px;
+        padding: -50px;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        font-size: 15px;
+        margin-bottom: 1px;
+    }
+    
+    #start {
+        justify-content: center;
+        background-color: black;
+        color: orange;
+        text-shadow: -1px 1.5px 1px purple;
+        margin: 0px;
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    #keeper-label {
+        top: -20px;
+        font-size: 15px;
+        padding: 3px;
+        margin: -70px;
+    }
+
+    #keeper {
+        margin-top:60px;
+        background-size: 100px;
+        margin-bottom: -260px;
+        padding: 50px;
+        /* margin-top: 190px; */
+    }
+    
+    #quiz-area {
+        top: 1px;
+        margin: 10px;
+        padding: 130px;
+    }
+
+    #questions {
+        top: 270px;
+        font-size: 15px;
+        padding: 5px;
+        margin: -100px;
+    }
+
+    #answer-buttons {
+        font-size: 8px;
+        margin: -30px;
+        padding: -250px;
+    }
+}

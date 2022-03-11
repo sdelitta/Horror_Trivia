@@ -136,6 +136,7 @@ ansThree.addEventListener("click", () => {
     questFunction()
 })
 
+
 start.addEventListener("click", () => {
     startSound.play()
     start.className = ("hidden")
