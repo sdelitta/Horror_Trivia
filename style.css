@@ -1,7 +1,10 @@
 
 body {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     background-color: grey;
+    
 }
 
  header {
@@ -14,7 +17,9 @@ body {
     margin-top: 0px;
     margin-bottom: 30px;
     padding: 1px;
-    /* font-family: ; */
+    font-family: ccmonstermash, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     }
 
 #quiz-area {
@@ -25,6 +30,14 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 150px;
+}
+
+#start {
+    justify-content: center;
+    background-color: black;
+    color: orange;
+    text-shadow: -1px 1.5px 1px purple;
+    margin: 100px;
 }
 
 #keeper-label {
@@ -94,29 +107,28 @@ button {
     
 }
 
-#start {
-    left: 220px;
-    background-color: black;
-    color: orange;
-    text-shadow: -1px 1.5px 1px purple;
-    position:relative;
-    margin: 100px;
-}
-
-
 button:active {
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-/* button:hover {
-    transform: scale(1.01);
+
+#win-screen {
+    block-size: 1000px;
+    background-image: url("https://www.teahub.io/photos/full/82-824687_landscape-gif.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* #win-button {
+   margin: 1px; 
+
 } */
+
 
 .hidden {
     display: none;
    }
    
    .visible {
-       display: block;
    }
